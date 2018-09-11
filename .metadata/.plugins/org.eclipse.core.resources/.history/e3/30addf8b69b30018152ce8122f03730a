@@ -1,0 +1,9 @@
+package com.ss.qa.testcases;
+
+public class SearchPageTest extends TestBase{
+	
+	SearchPageTest(){
+		super();
+	}
+
+}

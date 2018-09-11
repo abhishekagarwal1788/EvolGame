@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.ss.qa.testcases.HomePageTest">
+        <methods>
+          <include name="homePageJobBusinessLogoTest"/>
+          <include name="tearDown"/>
+          <include name="homePageTransportLogoTest"/>
+          <include name="homePageLogoTest"/>
+          <include name="setUp"/>
+          <include name="homePageTransportLinkTest"/>
+        </methods>
+      </class> <!-- com.ss.qa.testcases.HomePageTest -->
+      <class name="com.ss.qa.testcases.SearchPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyResultCount"/>
+        </methods>
+      </class> <!-- com.ss.qa.testcases.SearchPageTest -->
+      <class name="com.ss.qa.testcases.TransportPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="transportPageTitleTest"/>
+          <include name="teadDown"/>
+          <include name="transportPageAnnouncementButtonTest"/>
+          <include name="transportPageCarsLinkTest"/>
+        </methods>
+      </class> <!-- com.ss.qa.testcases.TransportPageTest -->
+      <class name="com.ss.qa.testcases.RegistrationPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateRegisterNewUser"/>
+        </methods>
+      </class> <!-- com.ss.qa.testcases.RegistrationPageTest -->
+      <class name="com.ss.qa.testcases.CarDetailPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateRegisterNewUser"/>
+        </methods>
+      </class> <!-- com.ss.qa.testcases.CarDetailPageTest -->
+      <class name="com.ss.qa.testcases.CarsPageTest">
+        <methods>
+          <include name="validateCarsPageTitle"/>
+          <include name="setUp"/>
+          <include name="differentModelsOfACar"/>
+          <include name="searchCarsByYear"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ss.qa.testcases.CarsPageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

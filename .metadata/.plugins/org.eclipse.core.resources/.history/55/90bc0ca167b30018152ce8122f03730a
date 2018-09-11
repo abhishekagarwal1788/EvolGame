@@ -1,0 +1,35 @@
+package com.ss.qa.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.ss.qa.base.TestBase;
+
+public class SearchPage extends TestBase{
+	
+	//Page Factory - OR
+	
+	@FindBy(id = "ptxt")
+	WebElement searchField;
+	
+	@FindBy(id = "sbtn")
+	WebElement searchBtn;
+	
+	@FindBy(xpath = "//select[@name='cid_0']")
+	WebElement section;
+	
+	List<WebElement> results = driver.findElements(By.xpath("//div[contains(@id,'cmp_')]"));
+
+	public int countResults() {
+		return driver.findElements(By.xpath("//div[contains(@id,'cmp_')]")).size();
+	}
+	
+	public void verifySearchStringInResults(int total) {
+		
+		
+	}
+	
+}

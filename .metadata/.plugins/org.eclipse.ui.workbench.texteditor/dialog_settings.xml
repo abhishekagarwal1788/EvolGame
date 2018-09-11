@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="subString"/>
+			<item value="sikuli"/>
+			<item value="begin"/>
+			<item value="LogTime"/>
+			<item value="sikulix"/>
+			<item value="driverOK"/>
+			<item value="driver"/>
+			<item value="takeScreenshotAtEndOfTest"/>
+			<item value="BMW"/>
+			<item value="//input[@type=&apos;checkbox&apos;]"/>
+			<item value="Exception"/>
+			<item value="ind happened on"/>
+			<item value="Find"/>
+			<item value="afterAlertDismiss"/>
+			<item value="beforeFindBy"/>
+		</list>
+		<list key="replacehistory">
+			<item value="driver"/>
+			<item value="driverOK"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="336" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="1123" key="DIALOG_X_ORIGIN"/>
+		<item value="189" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

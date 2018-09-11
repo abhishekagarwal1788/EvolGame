@@ -1,0 +1,19 @@
+url = https://www.ss.com/en
+browser = chrome
+alertTitle = Attention
+nameAlertText = "Specify Your name."
+surnameAlertText = "Specify Your surname."
+telephoneAlertText = "Enter the telephone with country code."
+emailAlertText = "Specify Your e-mail."
+PasswordAlertText = ""
+confirmPasswordAlertText = "Passwords do not coincide."
+imagePath = "D:\\Images\\
+carImage = Car.PNG"
+factoryImage = "Factory.PNG"
+
+passwordRules = "- Use a combination of uppercase and lowercase letters.
++- The password can contain numbers and special characters (=,&# etc.)
++- Specify a password consisting of not less than six characters.
++
++- Do not use as a password, name, surname, date of birth, or other well-known words, even partially.
++- Always include a unique password, and anywhere else it does not use."

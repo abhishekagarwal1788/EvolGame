@@ -1,0 +1,37 @@
+package com.ss.qa.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.ss.qa.base.TestBase;
+import com.ss.qa.pages.HomePage;
+import com.ss.qa.pages.SearchPage;
+
+public class SearchPageTest extends TestBase{
+	
+	HomePage homepage;
+	SearchPage searchpage;
+	
+	SearchPageTest(){
+		super();
+	}
+	
+	@BeforeMethod
+	public void setUp(){
+		initialization();
+		homepage = new HomePage();
+		searchpage = homepage.clickSearchLink();
+	}
+	
+	@Test
+	public void verifyResultCount() {
+		
+	}
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+		}
+}

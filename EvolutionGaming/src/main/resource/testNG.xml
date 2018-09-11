@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite name="Evolution Gaming Test Automation Test Suite">
+         
+  <test name="Evolution Gaming Test Automation">
+	 <classes>
+	   <class name="com.ss.qa.testcases.HomePageTest"/>
+	   <class name="com.ss.qa.testcases.TransportPageTest"/>
+	   <class name="com.ss.qa.testcases.CarsPageTest"/>
+	   <class name="com.ss.qa.testcases.RegistrationPageTest"/>
+	   <class name="com.ss.qa.testcases.CarDetailPageTest"/>
+	 </classes>
+   </test>
+   
+  
+</suite>

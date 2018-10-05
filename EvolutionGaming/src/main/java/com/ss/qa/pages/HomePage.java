@@ -1,5 +1,9 @@
 package com.ss.qa.pages;
 
+import java.sql.Driver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -75,9 +79,36 @@ public class HomePage extends TestBase {
 	
 	public void carImage() {
 		System.out.println("reached");
+		Screen screen = new Screen();
 		Pattern imageCar = new Pattern("D:\\Images\\Car.PNG");
-		TestUtil.findLogoInHomePage(screen, imageCar);
+		TestUtil.findLogoInHomePage(screen, imageCar);		
 		}
+	
+	public static void verifyJS() {
+		 WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Sadarbība')]"));
+		 JavascriptExecutor je = (JavascriptExecutor) driver;
+		 je.executeScript("arguments[0].scrollIntoView(true);", element);
+		 je.executeScript("document.getElementById('mtd_73').click();");
+		 
+		 je.executeScript("window.location.href = 'https://www.flipkart.com'");
+		 driver.findElement(By.xpath("//button[contains(@class,'29YdH8')]")).click();		 
+		WebElement element1 = driver.findElement(By.xpath("//span[text()='Electronics']"));
+
+		String mouseOverScript = "var evObj = document.createEvent('MouseEvents');"
+				+ "evObj.initEvent('mouseover', true, false);"
+				+ "arguments[0].dispatchEvent(evObj);";		
+        je.executeScript(mouseOverScript, element1);
+
+        WebElement element2 = driver.findElement(By.xpath("//a[contains(text(),'Honor')]"));        
+        je.executeScript("arguments[0].click();", element2);
+		 
+		 try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	public void FactoryImage() {
 		//imageFactory = new Pattern(prop.getProperty("imagePath")+"Factory.PNG");

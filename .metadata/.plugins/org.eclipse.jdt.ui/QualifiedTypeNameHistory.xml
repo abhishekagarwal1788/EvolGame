@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
-    <fullyQualifiedTypeName name="com.ss.qa.pages.TransportPage"/>
-    <fullyQualifiedTypeName name="com.ss.qa.pages.CarsPage"/>
-    <fullyQualifiedTypeName name="com.ss.qa.pages.CarDetailPage"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="com.ss.qa.testdata.CarsPageTestData"/>
-    <fullyQualifiedTypeName name="com.ss.qa.pages.RegistrationPage"/>
-    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
-    <fullyQualifiedTypeName name="com.ss.qa.pages.HomePage"/>
-    <fullyQualifiedTypeName name="com.ss.qa.pages.LoginPage"/>
     <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
@@ -21,7 +11,6 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
     <fullyQualifiedTypeName name="com.ss.qa.pages.RegistrationConfirmationPage"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.NoAlertPresentException"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.events.WebDriverEventListener"/>
     <fullyQualifiedTypeName name="java.util.logging.Logger"/>
@@ -31,7 +20,6 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.TakesScreenshot"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
@@ -43,13 +31,11 @@
     <fullyQualifiedTypeName name="ru.yandex.qatools.ashot.Screenshot"/>
     <fullyQualifiedTypeName name="ru.yandex.qatools.ashot.AShot"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.ss.qa.base.TestBase"/>
     <fullyQualifiedTypeName name="com.ss.qa.pages.SearchPage"/>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.apache.poi.util.SystemOutLogger"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
@@ -60,4 +46,18 @@
     <fullyQualifiedTypeName name="org.sikuli.script.Pattern"/>
     <fullyQualifiedTypeName name="com.ss.qa.util.TestUtil"/>
     <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="java.sql.Driver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedCondition"/>
+    <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.JavascriptExecutor"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.Platform"/>
+    <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.host.URL"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.remote.RemoteWebDriver"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

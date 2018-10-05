@@ -1,8 +1,8 @@
 package com.ss.qa.testcases;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -24,6 +24,7 @@ public class RegistrationPageTest extends TestBase{
 	RegistrationConfirmationPage regisconfirmpage;
 	String sheetName = "users";
 	String temp;
+	Logger log = Logger.getLogger(RegistrationPageTest.class);
 	
 	RegistrationPageTest(){
 		super(); 		
@@ -35,6 +36,7 @@ public class RegistrationPageTest extends TestBase{
 		homepage = new HomePage();
 		loginpage = homepage.clickMyMessagesLink();
 		registrationPage = loginpage.clickRegistrationLink();
+		log.info("this is setting up");
 	}
 	
 	@DataProvider
@@ -46,6 +48,7 @@ public class RegistrationPageTest extends TestBase{
 	@Test(priority=1, dataProvider="getTestData")
 	public void validateRegisterNewUser(String userName, String	userSurname, String	userEmail, String userPassword,
 			String userConfirmPassword, String	userPhone, String userCountry) throws InterruptedException {
+		log.info("this is setting up");
 			temp = registrationPage.createNewContact(userName, userSurname, userEmail, userPassword, userConfirmPassword, userPhone,
 				userCountry);
 		if (temp.contains(prop.getProperty("alertTitle"))) {
@@ -64,5 +67,6 @@ public class RegistrationPageTest extends TestBase{
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
+		log.info("finish test case");
 		}
 }

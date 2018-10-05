@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/4/10</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/16</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Sep 08 18:40:32 CEST 2018</td>
+<td>Started on:</td><td>Tue Sep 11 22:41:49 CEST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>35 seconds (35704 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23940 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,32 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ss.qa.testcases.CarsPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.CarsPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1339345635", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1339345635'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace67671827", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace67671827'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -138,103 +139,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>3</td>
-<td>com.ss.qa.testcases.CarsPageTest@71809907</td></tr>
+<td>com.ss.qa.testcases.CarsPageTest@3ce1e309</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.SearchPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.SearchPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickSearchLink(HomePage.java:67)
-	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:25)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1967617997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1967617997'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickSearchLink(HomePage.java:67)
-	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>2</td>
-<td>com.ss.qa.testcases.SearchPageTest@158da8e</td></tr>
-<tr>
-<td title='com.ss.qa.testcases.TransportPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace537265886", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace537265886'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:29)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace215759534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace215759534'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -272,143 +212,306 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>2</td>
-<td>com.ss.qa.testcases.TransportPageTest@74e52303</td></tr>
-<tr>
-<td title='com.ss.qa.testcases.CarDetailPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.CarDetailPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:35)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1943444495", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1943444495'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>2</td>
-<td>com.ss.qa.testcases.CarDetailPageTest@6e20b53a</td></tr>
-<tr>
-<td title='com.ss.qa.testcases.RegistrationPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.RegistrationPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickMyMessagesLink(HomePage.java:62)
-	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:36)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2015007762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2015007762'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickMyMessagesLink(HomePage.java:62)
-	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:36)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>3</td>
-<td>com.ss.qa.testcases.RegistrationPageTest@6aba2b86</td></tr>
+<td>com.ss.qa.testcases.SearchPageTest@74e52303</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1367068823", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1367068823'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>3</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.TransportPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1174881426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1174881426'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>4</td>
+<td>com.ss.qa.testcases.TransportPageTest@47af7f3d</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.CarDetailPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.CarDetailPageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:34)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace624693846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace624693846'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>3</td>
+<td>com.ss.qa.testcases.CarDetailPageTest@71809907</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.RegistrationPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.RegistrationPageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:35)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1096682443", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1096682443'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>5</td>
+<td>com.ss.qa.testcases.RegistrationPageTest@158da8e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -421,308 +524,52 @@ function toggleAllBoxes() {
 <td title='com.ss.qa.testcases.CarsPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.CarsPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarsPageTest@71809907</td></tr>
+<td>com.ss.qa.testcases.CarsPageTest@3ce1e309</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.CarsPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.CarsPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarsPageTest@71809907</td></tr>
+<td>com.ss.qa.testcases.CarsPageTest@3ce1e309</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.TransportPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ss.qa.testcases.TransportPageTest@74e52303</td></tr>
+<td>com.ss.qa.testcases.TransportPageTest@47af7f3d</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.TransportPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ss.qa.testcases.TransportPageTest@74e52303</td></tr>
+<td>com.ss.qa.testcases.TransportPageTest@47af7f3d</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.CarDetailPageTest.setUp()'><b>setUp</b><br>Test class: com.ss.qa.testcases.CarDetailPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarDetailPageTest@6e20b53a</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.ss.qa.testcases.HomePageTest.homePageJobBusinessLogoTest()'><b>homePageJobBusinessLogoTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.ss.qa.pages.HomePage.validateJobBusinessLogo(HomePage.java:49)
-	at com.ss.qa.testcases.HomePageTest.homePageJobBusinessLogoTest(HomePageTest.java:41)
-... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1726616678", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1726616678'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.ss.qa.pages.HomePage.validateJobBusinessLogo(HomePage.java:49)
-	at com.ss.qa.testcases.HomePageTest.homePageJobBusinessLogoTest(HomePageTest.java:41)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>0</td>
-<td>com.ss.qa.testcases.HomePageTest@3ce1e309</td></tr>
-<tr>
-<td title='com.ss.qa.testcases.HomePageTest.homePageLogoTest()'><b>homePageLogoTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.ss.qa.pages.HomePage.validateSSLogo(HomePage.java:45)
-	at com.ss.qa.testcases.HomePageTest.homePageLogoTest(HomePageTest.java:35)
-... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace347808407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace347808407'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.ss.qa.pages.HomePage.validateSSLogo(HomePage.java:45)
-	at com.ss.qa.testcases.HomePageTest.homePageLogoTest(HomePageTest.java:35)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>0</td>
-<td>com.ss.qa.testcases.HomePageTest@3ce1e309</td></tr>
-<tr>
-<td title='com.ss.qa.testcases.HomePageTest.homePageTransportLinkTest()'><b>homePageTransportLinkTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.HomePageTest.homePageTransportLinkTest(HomePageTest.java:53)
-... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1894144426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1894144426'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.HomePageTest.homePageTransportLinkTest(HomePageTest.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>0</td>
-<td>com.ss.qa.testcases.HomePageTest@3ce1e309</td></tr>
-<tr>
-<td title='com.ss.qa.testcases.HomePageTest.homePageTransportLogoTest()'><b>homePageTransportLogoTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.ss.qa.pages.HomePage.validateTransportLogo(HomePage.java:53)
-	at com.ss.qa.testcases.HomePageTest.homePageTransportLogoTest(HomePageTest.java:47)
-... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace405252209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace405252209'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.ss.qa.pages.HomePage.validateTransportLogo(HomePage.java:53)
-	at com.ss.qa.testcases.HomePageTest.homePageTransportLogoTest(HomePageTest.java:47)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</pre></div></td>
-<td>0</td>
-<td>com.ss.qa.testcases.HomePageTest@3ce1e309</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.ss.qa.testcases.HomePageTest.homePageTitleTest()'><b>homePageTitleTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
-<td></td>
-<td>0</td>
-<td>com.ss.qa.testcases.HomePageTest@3ce1e309</td></tr>
+<td>com.ss.qa.testcases.CarDetailPageTest@71809907</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -733,31 +580,32 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ss.qa.testcases.CarsPageTest.differentModelsOfACar()'><b>differentModelsOfACar</b><br>Test class: com.ss.qa.testcases.CarsPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1241938981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1241938981'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace726843606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace726843606'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -795,36 +643,407 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarsPageTest@71809907</td></tr>
+<td>com.ss.qa.testcases.CarsPageTest@3ce1e309</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.homePageJobBusinessLogoTest()'><b>homePageJobBusinessLogoTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1502668485", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1502668485'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.homePageLogoTest()'><b>homePageLogoTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace903268937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace903268937'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.homePageTitleTest()'><b>homePageTitleTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1193841543", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1193841543'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.homePageTransportLinkTest()'><b>homePageTransportLinkTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace290096578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace290096578'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.HomePageTest.homePageTransportLogoTest()'><b>homePageTransportLogoTest</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace217470033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace217470033'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>0</td>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.CarsPageTest.searchCarsByYear()'><b>searchCarsByYear</b><br>Test class: com.ss.qa.testcases.CarsPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1004430079", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1004430079'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1288135425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1288135425'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -862,36 +1081,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarsPageTest@71809907</td></tr>
+<td>com.ss.qa.testcases.CarsPageTest@3ce1e309</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.TransportPageTest.transportPageAnnouncementButtonTest()'><b>transportPageAnnouncementButtonTest</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1963974958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1963974958'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1195542839", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1195542839'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -929,36 +1154,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.TransportPageTest@74e52303</td></tr>
+<td>com.ss.qa.testcases.TransportPageTest@47af7f3d</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.TransportPageTest.transportPageCarsLinkTest()'><b>transportPageCarsLinkTest</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1045985568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1045985568'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace130721104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace130721104'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -996,36 +1227,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.TransportPageTest@74e52303</td></tr>
+<td>com.ss.qa.testcases.TransportPageTest@47af7f3d</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.TransportPageTest.transportPageTitleTest()'><b>transportPageTitleTest</b><br>Test class: com.ss.qa.testcases.TransportPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace619985571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace619985571'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:32)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1924227192", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1924227192'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.TransportPageTest.setUp(TransportPageTest.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1063,36 +1300,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.TransportPageTest@74e52303</td></tr>
+<td>com.ss.qa.testcases.TransportPageTest@47af7f3d</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.CarsPageTest.validateCarsPageTitle()'><b>validateCarsPageTitle</b><br>Test class: com.ss.qa.testcases.CarsPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace732597634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace732597634'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:34)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1058650291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1058650291'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarsPageTest.setUp(CarsPageTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1130,36 +1373,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarsPageTest@71809907</td></tr>
+<td>com.ss.qa.testcases.CarsPageTest@3ce1e309</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.CarDetailPageTest.validateRegisterNewUser()'><b>validateRegisterNewUser</b><br>Test class: com.ss.qa.testcases.CarDetailPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:35)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace874740624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace874740624'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:35)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:34)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1442077586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1442077586'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1197,36 +1446,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarDetailPageTest@6e20b53a</td></tr>
+<td>com.ss.qa.testcases.CarDetailPageTest@71809907</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.CarDetailPageTest.validateRegisterNewUser()'><b>validateRegisterNewUser</b><br>Test class: com.ss.qa.testcases.CarDetailPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:35)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1244775150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1244775150'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickTransportLink(HomePage.java:57)
-	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:35)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:34)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1744713739", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1744713739'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.CarDetailPageTest.setUp(CarDetailPageTest.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1264,36 +1519,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.CarDetailPageTest@6e20b53a</td></tr>
+<td>com.ss.qa.testcases.CarDetailPageTest@71809907</td></tr>
 <tr>
 <td title='com.ss.qa.testcases.RegistrationPageTest.validateRegisterNewUser()'><b>validateRegisterNewUser</b><br>Test class: com.ss.qa.testcases.RegistrationPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickMyMessagesLink(HomePage.java:62)
-	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:36)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1514955661", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1514955661'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickMyMessagesLink(HomePage.java:62)
-	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:36)
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:35)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace741390111", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace741390111'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.RegistrationPageTest.setUp(RegistrationPageTest.java:35)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1331,36 +1592,42 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.RegistrationPageTest@6aba2b86</td></tr>
+<td>com.ss.qa.testcases.RegistrationPageTest@158da8e</td></tr>
 <tr>
-<td title='com.ss.qa.testcases.SearchPageTest.verifyResultCount()'><b>verifyResultCount</b><br>Test class: com.ss.qa.testcases.SearchPageTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickSearchLink(HomePage.java:67)
-	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:25)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace726843606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace726843606'><pre>java.lang.NullPointerException
-	at com.ss.qa.util.WebEventListener.afterFindBy(WebEventListener.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:81)
-	at com.sun.proxy.$Proxy7.afterFindBy(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:189)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ss.qa.pages.HomePage.clickSearchLink(HomePage.java:67)
-	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:25)
+<td title='com.ss.qa.testcases.HomePageTest.verifyCarImageatHomePage()'><b>verifyCarImageatHomePage</b><br>Test class: com.ss.qa.testcases.HomePageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace938405008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace938405008'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.HomePageTest.setUp(HomePageTest.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1398,9 +1665,87 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
 </pre></div></td>
 <td>0</td>
-<td>com.ss.qa.testcases.SearchPageTest@158da8e</td></tr>
+<td>com.ss.qa.testcases.HomePageTest@6aba2b86</td></tr>
+<tr>
+<td title='com.ss.qa.testcases.SearchPageTest.verifySearchStringInResults()'><b>verifySearchStringInResults</b><br>Test class: com.ss.qa.testcases.SearchPageTest</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:29)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1278616846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1278616846'><pre>java.lang.NoClassDefFoundError: Lorg/sikuli/script/Screen;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3014)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2207)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.ss.qa.pages.HomePage.&lt;init&gt;(HomePage.java:39)
+	at com.ss.qa.testcases.SearchPageTest.setUp(SearchPageTest.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: org.sikuli.script.Screen
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	... 46 more
+</pre></div></td>
+<td>0</td>
+<td>com.ss.qa.testcases.SearchPageTest@74e52303</td></tr>
 </table><p>
 </body>
 </html>

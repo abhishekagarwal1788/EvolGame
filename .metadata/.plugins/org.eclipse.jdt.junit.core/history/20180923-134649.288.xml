@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ButtonInteractionTest.delayedDisplayOfElementShouldStillBeClickable" project="TestingCapabilityWeb" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="delayedDisplayOfElementShouldStillBeClickable" classname="se.claremont.autotest.websupport.webdrivergluecode.ButtonInteractionTest" incomplete="true"/>
+</testrun>

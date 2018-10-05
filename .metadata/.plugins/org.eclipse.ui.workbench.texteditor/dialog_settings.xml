@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Base" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="PageBase"/>
+			<item value="Base"/>
+			<item value="Settings"/>
+			<item value=".Settings"/>
+			<item value="java.lang.NoClassDefFoundError: Could not initialize class org.sikuli.basics.Settings"/>
 			<item value="subString"/>
 			<item value="sikuli"/>
 			<item value="begin"/>
@@ -18,11 +23,6 @@
 			<item value="takeScreenshotAtEndOfTest"/>
 			<item value="BMW"/>
 			<item value="//input[@type=&apos;checkbox&apos;]"/>
-			<item value="Exception"/>
-			<item value="ind happened on"/>
-			<item value="Find"/>
-			<item value="afterAlertDismiss"/>
-			<item value="beforeFindBy"/>
 		</list>
 		<list key="replacehistory">
 			<item value="driver"/>

@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.ss.qa.base.TestBase;
+import com.ss.qa.log.Log;
 import com.ss.qa.pages.CarDetailPage;
 import com.ss.qa.pages.CarsPage;
 import com.ss.qa.pages.HomePage;
@@ -49,6 +50,7 @@ public class CarDetailPageTest extends TestBase {
 		int rowCount = cardetailpage.tableRowCount();
 		int colCount = cardetailpage.tableColumnCount();
 		boolean flag = cardetailpage.verifyTableData(Announcement, Model, Year, Vol, Run, Price, rowCount, colCount);
+		Log.info("Table data verification"+flag);
 		System.out.println("Data found in system: "+flag);
 	}
 	

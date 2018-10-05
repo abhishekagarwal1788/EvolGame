@@ -1,0 +1,74 @@
+package com.ss.qa.testcases;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.Alert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.ss.qa.base.TestBase;
+import com.ss.qa.pages.HomePage;
+import com.ss.qa.pages.LoginPage;
+import com.ss.qa.pages.RegistrationConfirmationPage;
+import com.ss.qa.pages.RegistrationPage;
+import com.ss.qa.util.TestUtil;
+
+public class RegistrationPageTest extends TestBase{
+	
+	RegistrationPage registrationPage;
+	HomePage homepage;
+	LoginPage loginpage;
+	Alert alert;
+	RegistrationConfirmationPage regisconfirmpage;
+	String sheetName = "users";
+	String temp;
+	// Here we need to create logger instance so we need to pass Class name for 
+    //which  we want to create log file in my case Google is classname
+        Logger logger=Logger.getLogger("Google");
+      // configure log4j properties file
+      PropertyConfigurator.configure("Log4j.properties");
+	
+	RegistrationPageTest(){
+		super(); 		
+	}
+	
+	@BeforeMethod
+	public void setUp(){
+		initialization();
+		homepage = new HomePage();
+		loginpage = homepage.clickMyMessagesLink();
+		registrationPage = loginpage.clickRegistrationLink();
+	}
+	
+	@DataProvider
+	public Object[][] getTestData() {
+		Object [][] usersData = TestUtil.getTestData(sheetName);
+		return usersData;
+	}
+	
+	@Test(priority=1, dataProvider="getTestData")
+	public void validateRegisterNewUser(String userName, String	userSurname, String	userEmail, String userPassword,
+			String userConfirmPassword, String	userPhone, String userCountry) throws InterruptedException {
+			temp = registrationPage.createNewContact(userName, userSurname, userEmail, userPassword, userConfirmPassword, userPhone,
+				userCountry);
+			logger.info("Browser Opened");
+		if (temp.contains(prop.getProperty("alertTitle"))) {
+			System.out.println("Registration has been done successfully.");
+		}
+		else {
+			System.out.println("Registration failed due to:"+temp);
+		}
+		}
+	
+	
+	
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+		}
+}

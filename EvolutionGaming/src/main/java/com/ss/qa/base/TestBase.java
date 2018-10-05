@@ -6,13 +6,18 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.Screen;
 import org.sikuli.*;
 
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.ss.qa.util.TestUtil;
 import com.ss.qa.util.WebEventListener;
 
@@ -36,10 +41,11 @@ public class TestBase {
 			 e.printStackTrace();			 
 		 } catch (IOException e) {
 			 e.printStackTrace();
-		 }	 	
+		 }
 	 }
 
 	 public static void initialization() {
+		 //	DOMConfigurator.configure("log4j.xml");
 			String browserName = prop.getProperty("browser");
 			 if (browserName.equalsIgnoreCase("chrome")) {
 				  System.setProperty("webdriver.chrome.driver", "C:\\Users\\ABHISHEK.agarwal\\Downloads\\"
@@ -61,11 +67,7 @@ public class TestBase {
 			 driver.manage().deleteAllCookies();
 			 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT , TimeUnit.SECONDS);
 			 driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT , TimeUnit.SECONDS);
-			 screen = new Screen();
+			 System.out.println("reached");
 			 driver.get(prop.getProperty("url"));
 		}
-	 
-	 
-	 
-	 
 }

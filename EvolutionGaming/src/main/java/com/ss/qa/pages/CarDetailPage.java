@@ -8,9 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
+import com.ss.qa.log.Log;
 import com.ss.qa.base.TestBase;
-
 public class CarDetailPage extends TestBase{
 	
 	//Page Factory - OR
@@ -29,9 +28,12 @@ public class CarDetailPage extends TestBase{
 	
 	String data = "";
 	
+	
+	
 	//Initializing Page Objects:
 			public CarDetailPage() {
-				PageFactory.initElements(driver, this);								
+				PageFactory.initElements(driver, this);
+				Log.startTestCase("RegistrationConfirmationPage");
 			}			
 	
 	//Actions:
@@ -39,6 +41,7 @@ public class CarDetailPage extends TestBase{
 		tableRows = table.findElements(By.tagName("tr"));
 		int rowCount = tableRows.size();
 		System.out.println("ROW COUNT : "+rowCount);
+		Log.info("total nr of rows"+rowCount);
 		return rowCount;
 	}
 	

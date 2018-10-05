@@ -1,0 +1,101 @@
+package com.ss.qa.pages;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.jfree.util.Log;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import com.ss.qa.base.TestBase;
+
+public class CarDetailPage extends TestBase{
+	
+	//Page Factory - OR
+	
+	@FindBy(xpath = "//input[@type='checkbox']")
+	private List<WebElement> singlecriterion;
+	
+	@FindBy(xpath = "//img[contains(@class,'isfoto')]")
+	WebElement carImage;
+	
+	@FindBy(xpath = "//*[@id='filter_frm']/table[2]/tbody")
+	WebElement table;
+	
+	List<WebElement> tableRows;
+	List<WebElement> tableColumns;
+	
+	String data = "";
+	
+	//Initializing Page Objects:
+			public CarDetailPage() {
+				PageFactory.initElements(driver, this);								
+			}			
+	
+	//Actions:
+	public int tableRowCount() {
+		tableRows = table.findElements(By.tagName("tr"));
+		int rowCount = tableRows.size();
+		System.out.println("ROW COUNT : "+rowCount);
+		Log.info("total nr of rows"+rowCount);
+		return rowCount;
+	}
+	
+	public int tableColumnCount() {
+		tableColumns = tableRows.get(2).findElements(By.tagName("td"));
+		int colCount = tableColumns.size();
+		System.out.println("Column COUNT : "+colCount);
+		return colCount;
+	}
+	
+	public boolean verifyTableData(String announcement, String model, String year, String vol,
+			String run, String price, int rowCount, int colCount) {
+		List<String> all_elements_text=new ArrayList<>();
+		boolean flag = false;
+		
+		for(int i = 2; i<=rowCount; i++){
+				if(announcement.matches(table.findElement(By.xpath("//a[contains(@id,'dm_')]")).getText())){
+					flag = true;	
+					//driver.findElement(By.xpath("//*[@id='filter_frm']/table[2]/tbody/tr[" + i +"]/td[3]/a")).getText())) {
+					for(int j = 3; j<=colCount+2; j++){
+					all_elements_text.add(driver.findElement(By.xpath("//*[@id='filter_frm']/table[2]//tr[" + i +"]/td[" +j+ "]/a")).getText());
+				}
+					if(all_elements_text.contains(announcement)){
+						System.out.println("Announcement for this car is: "+announcement+"\n");			
+					}
+					else {
+						System.out.println("Announcement for this car is not matched: "+announcement+"\n");
+					}
+					
+					if(all_elements_text.contains(model)){
+						System.out.println("Model for this car is: "+model+"\n");
+					}
+					else {
+						System.out.println("Model for this car is not matched: "+model+"\n");
+					}
+					if(all_elements_text.contains(year)){
+						System.out.println("Year for this car is: "+year+"\n");			
+					}
+					else {
+						System.out.println("Year for this car is not matched: "+year+"\n");
+					}
+				}
+				else {
+					continue;
+				}
+		}
+		return flag;
+		
+		
+			
+								
+				
+				
+			}
+		
+	}
+	
+	

@@ -6,18 +6,20 @@
       <class name="com.ss.qa.testcases.HomePageTest">
         <methods>
           <include name="homePageJobBusinessLogoTest"/>
+          <include name="homePageTitleTest"/>
           <include name="tearDown"/>
           <include name="homePageTransportLogoTest"/>
           <include name="homePageLogoTest"/>
           <include name="setUp"/>
           <include name="homePageTransportLinkTest"/>
+          <include name="verifyCarImageatHomePage"/>
         </methods>
       </class> <!-- com.ss.qa.testcases.HomePageTest -->
       <class name="com.ss.qa.testcases.SearchPageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="verifySearchStringInResults"/>
           <include name="setUp"/>
-          <include name="verifyResultCount"/>
         </methods>
       </class> <!-- com.ss.qa.testcases.SearchPageTest -->
       <class name="com.ss.qa.testcases.TransportPageTest">
